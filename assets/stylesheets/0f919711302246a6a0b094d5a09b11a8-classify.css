@@ -1,0 +1,42 @@
+body:not([persona]) {
+    display: none;
+}
+
+body[persona=ibmer] [data-classification]:not([data-classification~=ibmer]) {
+    display: none;
+}
+
+body[persona=partner] [data-classification]:not([data-classification~=partner]) {
+    display: none;
+}
+
+#cic-personaOverrideDialog {
+	font-size: 1rem;
+}
+
+#cic-personaOverrideDialog-buttonRow {
+	display: grid;
+
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
+
+#cic-personaOverrideDialog-buttonRow > button {
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+#cic-personaOverrideDialog-buttonRow > button:active {
+	background-color: #d6d6d6;
+}
+
+#cic-personaOverrideDialog-buttonRow > button.firstRowButton { grid-row: 1; }
+#cic-personaOverrideDialog-buttonRow > button.secondRowButton { grid-row: 2; }
+
+#cic-personaOverrideDialog-buttonRow > button.firstColumnButton { grid-column: 1; }
+#cic-personaOverrideDialog-buttonRow > button.thirdColumnButton { grid-column: 3; }
+
+#cic-personaOverrideDialog::backdrop {
+	background-color: rgba(0, 0, 0, .5);
+}
