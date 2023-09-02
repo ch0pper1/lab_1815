@@ -1,0 +1,118 @@
+site_name: TechXchange Lab 1815
+site_description: >-
+  This hands on lab is designed to show you how to create an API and document it so that it can be used by watsonx Assistant.  The lab will start by creating a custom API that provides user information when requested.  After local testing is complete, the next step will be to create an OpenAPI specification that can be read by watsonx Assistant.  Finally, the API will be connected to the Assistant and tested.   
+  These advanced techniques can be used for any situation or customization of an existing API.  At the end of the lab, users can incorporate this knowledge into their custom demonstrations, POCs, and MVPs. 
+  General programming skills and watsonx Assistant Action skills necessary. 
+
+# Copyright
+copyright: Copyright © 2023 IBM Technology Sales
+
+# Configuration
+theme:
+  name: material
+  custom_dir: material/.overrides
+  features:
+    # - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: white
+      accent: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  favicon: https://www.ibm.com/favicon.ico
+  logo: assets/images/home.png
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  - glightbox
+  - classify_ibm_content
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - tables
+
+nav:
+  - Overview:
+    - index.md
+  - High Level Architecture: architecture/architecture.md
+  - Creating an API: create-api/create-api.md
+  - Building an OpenAPI Spec: openapi-spec/create-spec.md
+  - Connecting to watsonx Assistant: connect-wa/connect-wa.md
+  - Conclusion: conclusion/conclusion.md
+  - Appendices: 
+      #- appendices/index.md
+      - appendices/glossary.md 
+      - appendices/helpful-links.md
