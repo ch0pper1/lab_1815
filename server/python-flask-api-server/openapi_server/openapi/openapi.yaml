@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  description: An API for demonstrating OpenAPI specifications.
+  title: TechXchange Lab 1815 API
+  version: 1.0.0
+servers:
+- description: Testing server for fun.  Need to replace with Code Engine URL.
+  url: "https://{server}"
+  variables:
+    server:
+      default: api.example.com
+paths:
+  /users:
+    get:
+      operationId: users_get
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                users:
+                - id: 1
+                  name: John Doe
+                - id: 2
+                  name: Jane Smith
+          description: Successful response
+      summary: Get a list of users
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+    post:
+      operationId: users_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/_users_post_request'
+        required: true
+      responses:
+        "201":
+          description: User created successfully
+      summary: Create a new user
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+  /users/{user_id}:
+    get:
+      operationId: users_user_id_get
+      parameters:
+      - description: ID of the user
+        explode: false
+        in: path
+        name: user_id
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                id: 1
+                name: John Doe
+          description: Successful response
+        "404":
+          description: User not found
+      summary: Get user by ID
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+components:
+  schemas:
+    _users_post_request:
+      properties:
+        name:
+          title: name
+          type: string
+        email:
+          title: email
+          type: string
+      title: _users_post_request
+      type: object

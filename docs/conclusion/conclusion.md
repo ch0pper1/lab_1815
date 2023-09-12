@@ -2,9 +2,9 @@ In this lab, you've embarked on a journey to harness the power of Watsonx Assist
 
 Throughout this lab, you've delved into three key areas:
 
-**Creating an API:** You've learned how to craft a custom API tailored to your specific requirements. Whether it's fetching weather data from a third-party source or tapping into the latest generative AI capabilities, you now possess the skills to build APIs in the programming language of your choice. In our case, we explored creating a Python-based API that interacts with the Watsonx.ai foundation model.
-
 **Building an OpenAPI Specification:** You've become acquainted with the crucial role of OpenAPI specifications in enabling Watsonx Assistant to seamlessly integrate with your API. With an emphasis on OpenAPI spec version 3.0, you've familiarized yourself with the necessary tools and techniques for creating a valid specification that Watsonx Assistant can easily digest.
+
+**Creating an API:** You've learned how to craft a custom API tailored to your specific requirements. Whether it's fetching weather data from a third-party source or tapping into the latest generative AI capabilities, you now possess the skills to build APIs in the programming language of your choice. In our case, we explored creating a Python-based API that interacts with a simple users API.  To further your skills, you can go the [watsonx Assistant Starter-Kits](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits) to look at pre-built custom extensions, including connecting the Assistant to watsonx.ai for LLM generative AI use cases.
 
 **Connecting to Watsonx Assistant:** Finally, you've reached the culmination of this journey, where you've connected your API to Watsonx Assistant. By building an Action that calls the extension and displays the returned data, you've seen how the pieces of this intricate puzzle come together. This connection allows you to test your API within the Watsonx Assistant environment, ensuring that it operates as expected and provides valuable data to enhance your conversational AI experiences.
 

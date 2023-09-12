@@ -107,9 +107,12 @@ markdown_extensions:
 nav:
   - Overview:
     - index.md
-  - High Level Architecture: architecture/architecture.md
-  - Creating an API: create-api/create-api.md
+  # - High Level Architecture: architecture/architecture.md
+  #- Creating an API: create-api/create-api.md
   - Building an OpenAPI Spec: openapi-spec/create-spec.md
+  - Building the API: 
+      - Build the API from a Specifcation File: create-api/build-api-from-spec.md
+      - Deploy to IBM Code Engine: create-api/deploy-to-code-engine.md
   - Connecting to watsonx Assistant: connect-wa/connect-wa.md
   - Conclusion: conclusion/conclusion.md
   - Appendices: 

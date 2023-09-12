@@ -4,14 +4,14 @@ title: Lab 1815 - Connect watsonx Assistant to your Business Data using Custom E
 
 # Overview
 ## Connect watsonx Assistant to your Business Data using Custom Extensions
-This hands on lab is designed to show you how to create an API and document it so that it can be used by watsonx Assistant.  The lab will start by creating a custom API that provides user information when requested.  After local testing is complete, the next step will be to create an OpenAPI specification that can be read by watsonx Assistant.  Finally, the API will be connected to the Assistant and tested.
+This hands on lab is designed to show you how to create an API and document it so that it can be used by watsonx Assistant.  The lab will start by creating an OpenAPI specification and generating code from it.  After local testing is complete, the API will be connected to the Assistant and tested.
 These advanced techniques can be used for any situation or customization of an existing API.  At the end of the lab, users can incorporate this knowledge into their custom demonstrations, POCs, and MVPs. 
 General programming skills and watsonx Assistant Action skills necessary. 
 
 We will discuss three key areas:
 
-  - [Creating an API](create-api/create-api.md)
-  - [Building the OpenAPI Specification](openapi-spec/create-spec.md)
+  - [Building the OpenAPI Specification](create-api/build-api-from-spec.md)
+  - [Deploy the API service](create-api/deploy-to-code-engine.md)
   - [Connecting your API to watsonx Assistant](connect-wa/connect-wa.md)
 
 ### Creating an API

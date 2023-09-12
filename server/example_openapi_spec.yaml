@@ -1,0 +1,24 @@
+openapi: '3.0.2'
+info:
+  title: Example File to connect WA to an external server
+  version: '1.0'
+servers:
+  - url: https://testing.leibcorp.com/v1
+
+
+
+components:
+  securitySchemes:
+    BasicAuth: 
+      type: http
+      scheme: basic
+
+paths:
+  /test:
+    get:
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Not authenticated
+
